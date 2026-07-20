@@ -1,4 +1,4 @@
--- modulo2_unidad1_practica.sql
+-- modulo2_unidad1_diseno.sql
 -- Sistema de gestión de ventas
 
 
