@@ -6,6 +6,8 @@ Creando la base de datos Ventas_Tech_DB: DDL, Constraints e INSERT */
 
 
 
+-- ### ACLARACIÓN IMPORTANTE: ESTAMOS TRABAJANDO EXCLUSIVAMENTE CON SQL SERVER ###
+
 -- 1. Consulta de creación de base de datos
 CREATE DATABASE Ventas_Tech_DB;
 GO
