@@ -23,14 +23,14 @@ GO
 
 -- 3. Consulta de creación de tabla: categorias
 CREATE TABLE categorias (
-    id_categoria INT PRIMARY KEY,
+    id_categoria INT PRIMARY KEY NOT NULL,
     nombre_categoria VARCHAR(50) NOT NULL,
     descripcion VARCHAR(200)
 );
 
 -- 4: Consulta de creación de tabla: clientes
 CREATE TABLE clientes (
-    id_cliente INT PRIMARY KEY,
+    id_cliente INT PRIMARY KEY NOT NULL,
     nombre VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE,
     ciudad VARCHAR(50),
@@ -39,9 +39,9 @@ CREATE TABLE clientes (
 
 -- 5. Consulta de creación de tabla: productos
 CREATE TABLE productos (
-    id_producto INT PRIMARY KEY,
+    id_producto INT PRIMARY KEY NOT NULL,
     nombre_producto VARCHAR(100) NOT NULL,
-    id_categoria INT,
+    id_categoria INT NOT NULL,
     precio DECIMAL(10,2) NOT NULL,
     stock INT DEFAULT 0,
     activo BIT DEFAULT 1,
@@ -50,9 +50,9 @@ CREATE TABLE productos (
 
 -- 6. Consulta de creación de tabla: ventas
 CREATE TABLE ventas (
-    id_venta INT PRIMARY KEY,
-    id_cliente INT,
-    id_producto INT,
+    id_venta INT PRIMARY KEY NOT NULL,
+    id_cliente INT NOT NULL,
+    id_producto INT NOT NULL,
     cantidad INT NOT NULL,
     precio_unitario DECIMAL(10,2) NOT NULL,
     fecha_venta DATE NOT NULL,
